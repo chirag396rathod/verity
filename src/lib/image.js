@@ -4,7 +4,7 @@ const LOGO_BASE_PATH = "assets/logo/"
 const ICONS = "assets/icons/"
 const IMAGES = "assets/images/"
 
-export const LOGO = BASE_URL + LOGO_BASE_PATH + "logo.png";
+export const LOGO = BASE_URL + LOGO_BASE_PATH + "login-icon.svg";
 export const SIDEBAR_LOGO = BASE_URL + LOGO_BASE_PATH + "sidebar_logo.png"
 
 //  Icons 
@@ -47,7 +47,7 @@ export const TRASH_ICON = BASE_URL + ICONS + 'trash.svg'
 
 
 export const AUTH_IMAGE = BASE_URL + IMAGES + "auth.png";
-export const LOGIN_IMAGE = BASE_URL + IMAGES + "login.png"
+export const LOGIN_IMAGE = BASE_URL + IMAGES + "login.svg"
 export const FORGOT_PASSWORD_IMAGE = BASE_URL + IMAGES + "forgot_password.png";
 export const VERIFY_OTP_IMAGE = BASE_URL + IMAGES + "verify_otp.png";
 export const RESET_PASSWORD_IMAGE = BASE_URL + IMAGES + "reset_password.png";

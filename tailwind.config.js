@@ -17,15 +17,15 @@ export default {
         sm: 'calc(var(--radius) - 4px)'
       },
       colors: {
-        primary: '#232F55',
-        secondary: '#9EA0AD',
-        main: '#201F57',
+        primary: '#1F1F1F',
+        secondary: '#7F8892',
+        main: '#330099',
         ternary:'#7D8BB7'
        // placeholder:'#9EA0AD'
       },
       backgroundColor: {
-        primary: '#F7F8F8',
-        secondary: '#F5F5F5'
+        primary: '#F1EEF8',
+        secondary: '#F9FAFC'
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"]

@@ -29,8 +29,8 @@ const PasswordField = ({ name, placeholder = "", label = "", className = "", pre
                                 id={name}
                                 required
                                 placeholder={placeholder}
-                                className={cn('placeholder:text-secondary placeholder:font-normal  focus-visible:ring-offset-0  text-primary text-base sm:text-lg placeholder:text-base sm:placeholder:text-lg  h-[52px] sm:h-14  bg-white px-6 rounded-[10px] ',
-                                      errors?.[name]?.message ? "text-red-500 focus-visible:ring-red-500 border border-red-500 focus-visible:ring-1" : "text-primary border border-primary focus:border-main focus-visible:ring-1 focus-visible:ring-main"
+                                className={cn('placeholder:text-secondary placeholder:font-normal  focus-visible:ring-offset-0  text-primary text-base sm:text-lg placeholder:text-base sm:placeholder:text-lg  h-[52px] sm:h-14  bg-secondary px-6 rounded-[14px] ',
+                                      errors?.[name]?.message ? "text-red-500 focus-visible:ring-red-500 border border-red-500 focus-visible:ring-1" : "border-none text-primary focus:border-main focus-visible:ring-1 focus-visible:ring-main"
                                     , prefix ? "pl-[52px] sm:pl-[60px] pr-[52px] sm:pr-[60px]" : "", className)}
                             />
                         </FormControl>

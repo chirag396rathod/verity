@@ -43,20 +43,20 @@ const Login = () => {
             </div>
             <div className='flex-1  px-4 sm:px-5 md:px-8 lg:px-10 py-14 flex items-center'>
                 <div className='w-full space-y-5  sm:space-y-6 max-w-[520px] mx-auto'>
-                    <div>
+                    <div className='flex justify-center'>
                         <div className='flex max-sm:justify-center max-sm:mx-auto rounded-full items-center'>
-                            <img className='max-sm:w-[70px] w-[100px]' src={LOGO} alt="" />
+                            <img className='max-sm:w-[100px] w-[120px]' src={LOGO} alt="" />
                         </div>
                     </div>
                     <div className='space-y-2'>
-                        <h4 className='text-2xl max-sm:text-center sm:text-[28px] font-semibold text-primary'>Welcome Back!</h4>
-                        <p className='sm:text-base max-sm:text-center  md:text-lg text-secondary'>Please Sign In to continue</p>
+                        <h4 className='text-2xl text-center sm:text-[28px] font-semibold text-primary'>Log In</h4>
+                        <p className='sm:text-base text-center  md:text-lg text-secondary'>Please login to continue.</p>
                     </div>
                     <FormProvider methods={methods} onSubmit={handleSubmit(onSubmit)}>
                         <div className='space-y-8'>
                             <div className='flex flex-col gap-y-6 sm:gap-y-8'>
                                 <div className='space-y-2'>
-                                    <TextField prefix={<img src={SMS_ICON} />} placeholder='Email' name='email' />
+                                    <TextField prefix={<img src={SMS_ICON} />} placeholder='Enter email' name='email' />
                                 </div>
                                 <div className='space-y-2'>
                                     <PasswordField prefix={<img src={LOCK_ICON} />} placeholder="Enter Password" name="password" />
@@ -73,7 +73,7 @@ const Login = () => {
                                 className="font-medium rounded-[10px]"
                                 type='submit'
                             >
-                                {loading ? <Loading className="text-2xl" /> : 'Sign In'}
+                                {loading ? <Loading className="text-2xl" /> : 'Log In'}
                             </Button>
                         </div>
                     </FormProvider>

@@ -26,8 +26,8 @@ const TextField = ({ name, placeholder, textarea = false, label, className, pref
                                     id={name}
                                     required
                                     placeholder={placeholder}
-                                    className={cn('placeholder:text-secondary placeholder:font-normal text-primary text-base sm:text-lg placeholder:text-base sm:placeholder:text-lg h-[52px]  sm:h-14  bg-white px-6 py-3 rounded-[10px] font-medium ',
-                                        errors?.[name]?.message ? "text-red-500 focus-visible:ring-red-500 border-none" : "text-primary border-none focus-visible:ring-main"
+                                    className={cn('placeholder:text-secondary placeholder:font-normal text-primary text-base sm:text-lg placeholder:text-base sm:placeholder:text-lg h-[52px]  sm:h-14  bg-secondary px-6 py-3 rounded-[10px] font-medium ',
+                                        errors?.[name]?.message ? "text-red-500 focus-visible:ring-red-500 border-none" : "border-none focus-visible:ring-main"
                                         , prefix ? "pl-[46px] sm:pl-[52px]" : "", className)}
                                 /> :
                                 <Input
@@ -37,8 +37,8 @@ const TextField = ({ name, placeholder, textarea = false, label, className, pref
                                     id={name}
                                     required
                                     placeholder={placeholder}
-                                    className={cn('placeholder:text-secondary placeholder:font-normal focus-visible:ring-offset-0  text-primary text-base sm:text-lg placeholder:text-base sm:placeholder:text-lg  h-[52px] sm:h-14  bg-white px-6 rounded-[10px] sm:font-medium',
-                                        errors?.[name]?.message ? "text-red-500 focus-visible:ring-red-500 border border-red-500 focus-visible:ring-1" : "text-primary border border-primary focus:border-main focus-visible:ring-1 focus-visible:ring-main"
+                                    className={cn('placeholder:text-secondary placeholder:font-normal focus-visible:ring-offset-0  text-primary text-base sm:text-lg placeholder:text-base sm:placeholder:text-lg  h-[52px] sm:h-14  bg-secondary px-6 rounded-[10px] sm:font-medium',
+                                        errors?.[name]?.message ? "text-red-500 focus-visible:ring-red-500 border border-red-500 focus-visible:ring-1" : "border-none focus:border-main focus-visible:ring-1 focus-visible:ring-main"
                                         , prefix ? "pl-[52px] sm:pl-[60px]" : "", className)}
                                 />}
                         </FormControl>
