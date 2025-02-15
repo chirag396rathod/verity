@@ -34,15 +34,11 @@ const ForgotPassword = () => {
     formState: { errors },
   } = methods;
   const onSubmit = (values) => {
-    dispatch(adminForgetPassword(values))
-      .unwrap()
-      .then(() => {
-        navigate(AUTH_PATH.verifyOTP, {
-          state: {
-            email: values.email,
-          },
-        });
-      });
+    navigate(AUTH_PATH.verifyOTP, {
+      state: {
+        email: values.email,
+      },
+    });
   };
   return (
     <section className="min-h-dvh flex md:py-5 md:pl-5 md:gap-y-6  flex-col md:flex-row">

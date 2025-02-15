@@ -28,7 +28,7 @@ export default {
         secondary: '#F9FAFC'
       },
       fontFamily: {
-        poppins: ["Poppins", "sans-serif"]
+        Hellix: ["Hellix"]
       },
       borderColor: {
         primary: '#F2F3F5',
