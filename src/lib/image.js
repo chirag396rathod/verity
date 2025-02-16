@@ -42,6 +42,7 @@ export const SPECIALITY_ICON_ACTIVE = BASE_URL + ICONS + "specialist-active.svg"
 
 export const EDIT_ICON = BASE_URL + ICONS + 'edit.svg'
 export const TRASH_ICON = BASE_URL + ICONS + 'trash.svg'
+export const DOCUMENT_TEXT_ICON = BASE_URL + ICONS + "document-text.svg";
 
 export const ARROW_BACK = BASE_URL + ICONS + 'send.png';
 
