@@ -47,27 +47,6 @@ const Users = () => {
   });
   return (
     <>
-      {/* <CommonModal
-        data={{
-          open: true,
-        }}
-        handleSubmit={()=>{}}
-        setData={undefined}
-        title={"Delete Post"}
-        description={"Are you sure you want to delete this post?"}
-        leftText={"No"}
-        rightText={"Yes"}
-      /> */}
-      {/* <CommonFormModal
-        data={{
-          open: true,
-        }}
-        handleSubmit={() => {}}
-        setData={undefined}
-        title={"Warning Message"}
-        leftText={"Send"}
-        rightText={"Cancel"}
-      /> */}
       <div className="flex-1 p-3 sm:p-5 overflow-auto bg-primary">
         <DataTable
           loading={loading}
