@@ -5,3 +5,4 @@ const ProfileReports = () => {
 };
 
 export default ProfileReports;
+  

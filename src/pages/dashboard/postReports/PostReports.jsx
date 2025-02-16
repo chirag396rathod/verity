@@ -25,7 +25,7 @@ const PostReports = () => {
 
   const dispatch = useDispatch();
   const { loading, userData, total_user } = useSelector((state) => state.user);
-  const { searchQuery, setSearchQuery } = useSearch();
+  const { searchQuery } = useSearch();
   const [searchParams, setSearchParams] = useSearchParams();
   // const [requestsList, setRequestsList] = useState([])
   // const [loading, setLoading] = useState(true)
@@ -97,6 +97,8 @@ const PostReports = () => {
         return { width: "67.344px", left: "235.589px" };
     }
   };
+
+  console.log({userData})
 
   return (
     <>
