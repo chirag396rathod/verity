@@ -36,3 +36,9 @@
 input[type='number'] {
   @apply [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none;
 }
+
+.custum-scroll{
+  overflow-y: auto;
+  scrollbar-width: none;
+  /* scrollbar-color: #e5e5e5 #f8f8f8; */
+}
