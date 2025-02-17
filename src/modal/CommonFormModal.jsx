@@ -13,6 +13,7 @@ const CommonFormModal = ({
   title,
   rightText,
   leftText,
+  handleClose
 }) => {
     const defaultValues ={
         message: ""
@@ -25,16 +26,9 @@ const CommonFormModal = ({
     formState: { errors },
   } = methods;
 
-  const handleClose = () => {
-    setData({
-      open: false,
-      data: null,
-    });
-  };
-
   return (
     <Dialog
-      open={data.open}
+      open={open}
       onOpenChange={(e) => !e && handleClose}
       onPointerDownOutside={(e) => e.preventDefault()}
       onOpenAutoFocus={(e) => e.preventDefault()}

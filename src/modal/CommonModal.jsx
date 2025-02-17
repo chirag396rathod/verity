@@ -12,17 +12,11 @@ const CommonModal = ({
   description,
   rightText,
   leftText,
+  handleClose
 }) => {
-  const handleClose = () => {
-    setData({
-      open: false,
-      data: null,
-    });
-  };
-
   return (
     <Dialog
-      open={data.open}
+      open={open}
       onOpenChange={(e) => !e && handleClose}
       onPointerDownOutside={(e) => e.preventDefault()}
       onOpenAutoFocus={(e) => e.preventDefault()}
