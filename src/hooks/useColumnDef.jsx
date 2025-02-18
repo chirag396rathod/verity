@@ -685,7 +685,98 @@ const useColumnDef = (fns) => {
     ],
     []
   );
- 
+  const postReportsColumns = useMemo(
+    () => [
+      columnHelper.accessor("name", {
+        header: () => <p className="sm:px-3">Post</p>,
+        cell: (props) => (
+          <div className="flex gap-4 sm:px-3 items-center">
+            <div>
+              <Zoom
+                src={props.row.original.profile}
+                className="w-[35px] sm:w-[50px] rounded-lg"
+              />
+            </div>
+          </div>
+        ),
+        size: getColumnSize({
+          "3xl": 200,
+          "2xl": 200,
+          sm: 180,
+          default: 180,
+        }),
+      }),
+      columnHelper.accessor("name", {
+        header: () => <p className="sm:px-3">Post By</p>,
+        cell: (props) => (
+          <div className="flex gap-4 sm:px-3 items-center">
+            <div>
+              <Zoom
+                src={props.row.original.profile}
+                className="w-[35px] sm:w-[50px] rounded-lg"
+              />
+            </div>
+            <p className=" max-w-[200px] text-wrap break-words">
+              {props.row?.original?.fname} {props?.row?.original?.lname}
+            </p>
+          </div>
+        ),
+        size: getColumnSize({
+          "3xl": 400,
+          "2xl": 350,
+          sm: 330,
+          default: 220,
+        }),
+      }),
+      columnHelper.accessor("No. of Times Reported", {
+        header: "No. of Times Reported",
+        cell: (props) => <p className="text-wrap break-all text-primary">50</p>,
+        size: getColumnSize({
+          "3xl": 250,
+          "2xl": 250,
+          lp: 180,
+          default: 250,
+        }),
+      }),
+  
+      columnHelper.display({
+        id: "actions",
+        header: () => <p className="text-center">Action</p>,
+        cell: (props) => (
+          <div className="flex items-center justify-center gap-x-6">
+            <Button
+              className="aspect-square !rounded-2xl !p-3"
+              // onClick={() => onEdit()}
+              variant="edit"
+            >
+              <div className="h-5 w-5">{VIEW}</div>
+            </Button>
+            <Button
+              className="aspect-square !rounded-2xl !p-3"
+              variant="edit"
+              // onClick={() => onDelete(id)}
+            >
+              <div className="h-5 w-5">{DELETE}</div>
+            </Button>
+            <Button
+              className="aspect-square !rounded-2xl !p-3"
+              variant="edit"
+              // onClick={() => onDelete(id)}
+            >
+              <div className="h-5 w-5">{USERROUND}</div>
+            </Button>
+          </div>
+        ),
+        size: getColumnSize({
+          xl: null,
+          sm: 120,
+          default: 120,
+        }),
+      }),
+    ],
+    [screenWidth]
+  );
+
   return {
     userColumns,
     helperColumns,
@@ -693,7 +784,8 @@ const useColumnDef = (fns) => {
     newRequestColumns,
     removeFromTagsColumns,
     ProfileReportsColumns,
-    ProfileVerificationColumns
+    ProfileVerificationColumns,
+    postReportsColumns
   };
 };
 
