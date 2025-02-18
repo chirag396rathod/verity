@@ -654,9 +654,7 @@ const useColumnDef = (fns) => {
                 className={
                   "capitalize bg-[#34C7591A] text-[#34C759] font-medium rounded-[33px] w-full text-center px-5 py-1"
                 }
-                onClick={() => {
-                  fns.handleVerifyClick(props.row.original);
-                }}
+                onClick={() => {}}
               >
                 Verify
               </button>
@@ -665,11 +663,7 @@ const useColumnDef = (fns) => {
                 className={
                   "capitalize bg-[#FF7B7B1A] text-[#FF7B7B] font-medium rounded-[33px] w-full text-center px-5 py-1"
                 }
-                onClick={() => {
-                  fns.handleDeclineClick({
-                    data: props.row.original,
-                  });
-                }}
+                onClick={() => {}}
               >
                 Decline
               </button>
@@ -738,7 +732,7 @@ const useColumnDef = (fns) => {
           default: 250,
         }),
       }),
-  
+
       columnHelper.display({
         id: "actions",
         header: () => <p className="text-center">Action</p>,
@@ -776,6 +770,185 @@ const useColumnDef = (fns) => {
     ],
     [screenWidth]
   );
+  const AppFeedbackColumns = useMemo(
+    () => [
+      columnHelper.accessor("Profile", {
+        header: () => <p className="sm:px-3">Profile</p>,
+        cell: (props) => (
+          <div className="flex gap-4 sm:px-3 items-center">
+            <div>
+              <Zoom
+                src={props.row.original.post_of_profile}
+                className="w-[44px] h-[44px] object-cover sm:w-[44px] rounded-lg"
+              />
+            </div>
+            <p className=" max-w-[200px] text-wrap break-words">
+              {props.row?.original?.post_of_name}
+            </p>
+          </div>
+        ),
+        size: getColumnSize({
+          "3xl": 400,
+          "2xl": 350,
+          sm: 330,
+          default: 220,
+        }),
+      }),
+      columnHelper.accessor("Feeling", {
+        header: () => <p className="sm:px-3">I’m Feeling</p>,
+        cell: (props) => (
+          <div className="flex gap-4 sm:px-3 items-center">
+            <p className=" max-w-[200px] text-wrap break-words">
+              {props.row?.original?.feeling}
+            </p>
+          </div>
+        ),
+        size: getColumnSize({
+          "3xl": 400,
+          "2xl": 350,
+          sm: 330,
+          default: 220,
+        }),
+      }),
+      columnHelper.accessor("Message", {
+        header: () => <p className="sm:px-3">Message</p>,
+        cell: (props) => (
+          <div className="flex gap-4 sm:px-3 items-center">
+            <p className=" max-w-[200px] text-wrap break-words">
+              {props.row?.original?.reason}
+            </p>
+          </div>
+        ),
+        size: getColumnSize({
+          "3xl": 400,
+          "2xl": 350,
+          sm: 330,
+          default: 220,
+        }),
+      }),
+      columnHelper.display({
+        id: "actions",
+        header: () => <p className="text-center">Action</p>,
+        cell: (props) => (
+          <div className="flex justify-center items-center">
+            <div className="flex gap-3 items-center">
+              <button
+                type="button"
+                className={
+                  "capitalize bg-[#3300991A] text-[#330099] font-medium rounded-[33px] w-full text-center px-5 py-1"
+                }
+                onClick={() => {
+                  fns.handleReplyClick(props.row.original);
+                }}
+              >
+                Reply
+              </button>
+            </div>
+          </div>
+        ),
+        size: getColumnSize({
+          xl: null,
+          sm: 220,
+          default: 180,
+        }),
+      }),
+    ],
+    []
+  );
+  const DeleteAccountColumns = useMemo(
+    () => [
+      columnHelper.accessor("Profile", {
+        header: () => <p className="sm:px-3">Profile</p>,
+        cell: (props) => (
+          <div className="flex gap-4 sm:px-3 items-center">
+            <div>
+              <Zoom
+                src={props.row.original.post_of_profile}
+                className="w-[44px] h-[44px] object-cover sm:w-[44px] rounded-lg"
+              />
+            </div>
+            <p className=" max-w-[200px] text-wrap break-words">
+              {props.row?.original?.post_of_name}
+            </p>
+          </div>
+        ),
+        size: getColumnSize({
+          "3xl": 400,
+          "2xl": 350,
+          sm: 330,
+          default: 220,
+        }),
+      }),
+      columnHelper.accessor("Reason", {
+        header: () => <p className="sm:px-3">Reason</p>,
+        cell: (props) => (
+          <div className="flex gap-4 sm:px-3 items-center">
+            <p className=" max-w-[200px] text-wrap break-words">
+              {props.row?.original?.reason}
+            </p>
+          </div>
+        ),
+        size: getColumnSize({
+          "3xl": 400,
+          "2xl": 350,
+          sm: 330,
+          default: 220,
+        }),
+      }),
+      columnHelper.accessor("Other", {
+        header: () => <p className="sm:px-3">Other</p>,
+        cell: (props) => (
+          <div className="flex gap-4 sm:px-3 items-center">
+            <p className=" max-w-[200px] text-wrap break-words">
+              {props.row?.original?.other}
+            </p>
+          </div>
+        ),
+        size: getColumnSize({
+          "3xl": 400,
+          "2xl": 350,
+          sm: 330,
+          default: 220,
+        }),
+      }),
+      columnHelper.display({
+        id: "actions",
+        header: () => <p className="text-center">Action</p>,
+        cell: (props) => (
+          <div className="flex justify-center items-center">
+            <div className="flex gap-3 items-center">
+              <button
+                type="button"
+                className={
+                  "capitalize bg-[#3300991A] text-[#330099] font-medium rounded-[33px] w-full text-center px-5 py-1"
+                }
+                onClick={() => {
+                  fns.handleDeleteClick(props.row.original);
+                }}
+              >
+                Delete
+              </button>
+              <button
+                type="button"
+                className={
+                  "capitalize bg-[#8E8E931A] text-[#8E8E93] font-medium rounded-[33px] w-full text-center px-5 py-1"
+                }
+                onClick={() => {}}
+              >
+                Reply
+              </button>
+            </div>
+          </div>
+        ),
+        size: getColumnSize({
+          xl: null,
+          sm: 220,
+          default: 180,
+        }),
+      }),
+    ],
+    []
+  );
 
   return {
     userColumns,
@@ -785,7 +958,9 @@ const useColumnDef = (fns) => {
     removeFromTagsColumns,
     ProfileReportsColumns,
     ProfileVerificationColumns,
-    postReportsColumns
+    postReportsColumns,
+    AppFeedbackColumns,
+    DeleteAccountColumns,
   };
 };
 

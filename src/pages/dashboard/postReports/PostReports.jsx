@@ -108,7 +108,7 @@ const PostReports = () => {
               m
               tabIndex={searchParams.get("tab") === tab.value ? 1 : -1}
               className={cn(
-                "font-medium text-[18px] rounded-sm bg-transparent px-3 mt-[32px] min-w-[120px] transition-all duration-500 ease-in-out hover:bg-transparent",
+                "font-medium text-[18px] mb-3 rounded-sm bg-transparent px-3 mt-[32px] min-w-[120px] transition-all duration-500 ease-in-out hover:bg-transparent",
                 searchParams.get("tab") === tab.value
                   ? "text-textMain"
                   : "text-textGray"
@@ -120,7 +120,7 @@ const PostReports = () => {
         })}
         <div
           ref={activeTabRef}
-          className="absolute -bottom-3  h-1 w-[101.688px] rounded-lg bg-main transition-all duration-500 ease-in-out md:-bottom-[10px]"
+          className="absolute -bottom-3  h-1 w-[101.688px] rounded-lg bg-main transition-all duration-500 ease-in-out md:-bottom-[0px]"
         />
       </div>
       <div className="flex-1 mt-[32px] p-3 sm:p-5 overflow-auto ">
