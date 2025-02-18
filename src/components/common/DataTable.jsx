@@ -52,29 +52,42 @@ const DataTable = ({
     getCoreRowModel: getCoreRowModel(),
   });
 
-    return (
-        <div className='h-full flex flex-col overflow-hidden '>
-            <ScrollArea className='flex-1 rounded-t-[15px] overflow-auto bg-white p-[20px] shadow-sm'>
-                {
-                    !loader ? <>
-                        <Table className='h-max sticky rounded-[12px] bg-[#F4F5F7]  top-0'>
-                            <TableHeader className='bg-table_header bg-[#F4F5F7] rounded-[12px] '>
-                                {table.getHeaderGroups().map(headerGroup => (
-                                    <TableRow key={headerGroup.id} className='flex  rounded-[15px] items-center  border-none'>
-                                        {headerGroup.headers.map(header => {
-                                            return (
-                                                <TableHead
-                                                    key={header.id}
-                                                    style={header.getSize() === 150 ? { width: '100%' } : { minWidth: header.getSize() + 'px' }}
-                                                    className='bg-table_header py-4 sm:py-[18px] px-4 sm:px-6 text-sm sm:text-lg bg-secondary text-secondary font-medium'>
-                                                    {header.isPlaceholder ? null : flexRender(header.column.columnDef.header, header.getContext())}
-                                                </TableHead>
-                                            )
-                                        })}
-                                    </TableRow>
-                                ))}
-                            </TableHeader>
-                        </Table>
+  return (
+    <div className="h-full flex flex-col overflow-hidden ">
+      <ScrollArea className="flex-1 rounded-t-[15px] overflow-auto bg-white p-[20px] shadow-sm">
+        {!loader ? (
+          <>
+            <Table className="h-max sticky rounded-[12px] bg-[#F4F5F7]  top-0">
+              <TableHeader className="bg-[#F4F5F7] rounded-[12px] ">
+                {table.getHeaderGroups().map((headerGroup) => (
+                  <TableRow
+                    key={headerGroup.id}
+                    className="flex  rounded-[15px] items-center  border-none"
+                  >
+                    {headerGroup.headers.map((header) => {
+                      return (
+                        <TableHead
+                          key={header.id}
+                          style={
+                            header.getSize() === 150
+                              ? { width: "100%" }
+                              : { minWidth: header.getSize() + "px" }
+                          }
+                          className="py-4 sm:py-[18px] px-4 sm:px-6 text-sm sm:text-lg bg-secondary text-secondary font-medium"
+                        >
+                          {header.isPlaceholder
+                            ? null
+                            : flexRender(
+                                header.column.columnDef.header,
+                                header.getContext()
+                              )}
+                        </TableHead>
+                      );
+                    })}
+                  </TableRow>
+                ))}
+              </TableHeader>
+            </Table>
 
             <Table>
               <TableBody className="">
@@ -162,12 +175,9 @@ const DataTable = ({
                   </PaginationItem>
 
                   {Array.from({ length: totalPages }).map((_, i) => (
+                    // eslint-disable-next-line react/jsx-key
                     <PaginationItem>
                       <PaginationLink
-                        // className={` rounded-full border-none ${page === i + 1
-                        //   ? " bg-[#ED1B241A]/10 text-red"
-                        //   : "bg-transparent text-secondary"
-                        //   } text-sm md:text-base  rounded-lg`}
                         href="#"
                         onClick={() => setPage(i + 1)}
                         className={`size-8 sm:size-10  ${
