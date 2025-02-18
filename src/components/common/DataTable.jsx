@@ -112,12 +112,9 @@ const DataTable = ({ data, columns, pagination = true, totalItems, itemPerPage, 
                                 </PaginationItem>
 
                                 {Array.from({ length: totalPages }).map((_, i) => (
+                                    // eslint-disable-next-line react/jsx-key
                                     <PaginationItem>
                                         <PaginationLink
-                                            // className={` rounded-full border-none ${page === i + 1
-                                            //   ? " bg-[#ED1B241A]/10 text-red"
-                                            //   : "bg-transparent text-secondary"
-                                            //   } text-sm md:text-base  rounded-lg`}
                                             href="#"
                                             onClick={() => setPage(i + 1)}
                                             className={`size-8 sm:size-10  ${page === i + 1 ? "text-main bg-[#E1ECFF]" : "text-secondary bg-transparent"}   border-[2px] border-none hover:bg-[#E1ECFF] text-sm md:text-base text-secondary hover:text-main  rounded-full font-medium`}
