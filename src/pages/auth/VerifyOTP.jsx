@@ -58,7 +58,7 @@ const VerifyOTP = () => {
 
   return (
     <section className="min-h-dvh flex md:py-5 md:pl-5 md:gap-y-6  flex-col md:flex-row">
-      <div className="flex-1   bg-primary md:flex justify-center items-center rounded-[48px]  hidden">
+      <div className="flex-1   bg-auth_primary md:flex justify-center items-center rounded-[48px]  hidden">
         <div className="w-full flex justify-center  max-w-[380px] md:max-w-[640px]">
           <img
             className="w-[80%] lp:w-[90%] h-auto"
@@ -76,10 +76,11 @@ const VerifyOTP = () => {
           </div>
           <div className="space-y-2">
             <h4 className="text-2xl text-center sm:text-[28px] font-semibold text-primary">
-            Authentication
+              Authentication
             </h4>
             <p className="sm:text-base text-center  md:text-lg text-secondary">
-            We just sent a secret code to your e-mail <br /> address (give it a few moments).
+              We just sent a secret code to your e-mail <br /> address (give it
+              a few moments).
             </p>
           </div>
           <FormProvider methods={methods} onSubmit={handleSubmit(onSubmit)}>
