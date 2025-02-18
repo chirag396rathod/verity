@@ -53,7 +53,7 @@ const ResetPassword = () => {
   };
   return (
     <section className="min-h-dvh flex md:py-5 md:pl-5 md:gap-y-6  flex-col md:flex-row">
-      <div className="flex-1   bg-primary md:flex justify-center items-center rounded-[48px]  hidden">
+      <div className="flex-1   bg-auth_primary md:flex justify-center items-center rounded-[48px]  hidden">
         <div className="w-full flex justify-center  max-w-[380px] md:max-w-[640px]">
           <img
             className="w-[80%] lp:w-[90%] h-auto"
@@ -64,7 +64,7 @@ const ResetPassword = () => {
       </div>
       <div className="flex-1 relative px-4 sm:px-5 md:px-8 lg:px-10 py-14 flex items-center">
         <div className="w-full space-y-5  sm:space-y-6 max-w-[520px] mx-auto">
-        <div className="flex justify-center items-center">
+          <div className="flex justify-center items-center">
             <div className="flex border-none w-[120px] h-[120px]   sm:w-[120px] sm:h-[120px] justify-center max-sm:mx-auto items-center">
               <img
                 className="max-sm:w-[100px]"

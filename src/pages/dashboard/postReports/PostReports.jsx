@@ -27,10 +27,6 @@ const PostReports = () => {
   const { loading, userData, total_user } = useSelector((state) => state.user);
   const { searchQuery } = useSearch();
   const [searchParams, setSearchParams] = useSearchParams();
-  // const [requestsList, setRequestsList] = useState([])
-  // const [loading, setLoading] = useState(true)
-  // const [requestLoading, setRequestLoading] = useState(false)
-  // const [selectedId, setSelectedId] = useState(null)
 
   useEffect(() => {
     if (!searchParams.get("tab")) return setSearchParams({ tab: "doctor" });
@@ -60,7 +56,7 @@ const PostReports = () => {
 
   const handleViewUser = () => {};
 
-  const { userColumns } = useColumnDef({
+  const { postReportsColumns } = useColumnDef({
     handleViewUser,
   });
 
@@ -93,8 +89,6 @@ const PostReports = () => {
         return { width: "101.688px", left: "12px" };
       case tabs[1].value:
         return { width: "73.781px", left: "138.248px" };
-      case tabs[2].value:
-        return { width: "67.344px", left: "235.589px" };
     }
   };
 
@@ -111,9 +105,10 @@ const PostReports = () => {
               onClick={() =>
                 setSearchParams({ tab: tab.value }, { replace: true })
               }
+              m
               tabIndex={searchParams.get("tab") === tab.value ? 1 : -1}
               className={cn(
-                "rounded-sm bg-transparent px-3 py-2 text-base transition-all duration-500 ease-in-out hover:bg-transparent",
+                "font-medium text-[18px] rounded-sm bg-transparent px-3 mt-[32px] min-w-[120px] transition-all duration-500 ease-in-out hover:bg-transparent",
                 searchParams.get("tab") === tab.value
                   ? "text-textMain"
                   : "text-textGray"
@@ -125,14 +120,14 @@ const PostReports = () => {
         })}
         <div
           ref={activeTabRef}
-          className="absolute -bottom-3 left-3 h-1 w-[101.688px] rounded-lg bg-textMain transition-all duration-500 ease-in-out md:-bottom-[20px]"
+          className="absolute -bottom-3  h-1 w-[101.688px] rounded-lg bg-main transition-all duration-500 ease-in-out md:-bottom-[10px]"
         />
       </div>
-      <div className="flex-1 p-3 sm:p-5 overflow-auto bg-primary">
+      <div className="flex-1 mt-[32px] p-3 sm:p-5 overflow-auto ">
         <DataTable
           loading={loading}
           data={userData}
-          columns={userColumns}
+          columns={postReportsColumns}
           page={page}
           setPage={setPage}
           limit={limit}

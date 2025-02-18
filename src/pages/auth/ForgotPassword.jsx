@@ -4,7 +4,7 @@ import BackButton from "@/components/common/BackButton";
 import Loading from "@/components/common/Loading";
 import Button from "@/components/custom/Button";
 import {
-    ARROW_BACK,
+  ARROW_BACK,
   FORGOT_PASSWORD_ICON,
   FORGOT_PASSWORD_IMAGE,
   SMS_ICON,
@@ -42,7 +42,7 @@ const ForgotPassword = () => {
   };
   return (
     <section className="min-h-dvh flex md:py-5 md:pl-5 md:gap-y-6  flex-col md:flex-row">
-      <div className="flex-1   bg-primary md:flex justify-center items-center rounded-[48px]  hidden">
+      <div className="flex-1   bg-auth_primary md:flex justify-center items-center rounded-[48px]  hidden">
         <div className="w-full flex justify-center  max-w-[380px] md:max-w-[640px]">
           <img
             className="w-[80%] lp:w-[90%] h-auto"
@@ -96,7 +96,7 @@ const ForgotPassword = () => {
               onClick={() => navigate(-1)}
               className="w-[148px]  font-normal text-secondary flex items-center justify-center gap-[14px]"
             >
-                <img src={ARROW_BACK} />
+              <img src={ARROW_BACK} />
               Back to Login
             </button>
           </div>
