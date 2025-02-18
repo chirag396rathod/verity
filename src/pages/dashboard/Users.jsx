@@ -1,8 +1,10 @@
 import DataTable from "@/components/common/DataTable";
 import useColumnDef from "@/hooks/useColumnDef";
 import useSearch from "@/hooks/useSearch";
+import CommonFormModal from "@/modal/CommonFormModal";
+import CommonModal from "@/modal/CommonModal";
 import { getUserList } from "@/redux/action/user.action";
-import { faker } from "@faker-js/faker";
+import { faker, tr } from "@faker-js/faker";
 import { debounce } from "lodash";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";

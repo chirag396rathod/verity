@@ -52,42 +52,29 @@ const DataTable = ({
     getCoreRowModel: getCoreRowModel(),
   });
 
-  return (
-    <div className="h-full flex flex-col overflow-hidden">
-      <ScrollArea className="flex-1 rounded-t-[15px] overflow-auto bg-white shadow-sm">
-        {!loader ? (
-          <>
-            <Table className="h-max sticky rounded-[15px] bg-secondary  top-0">
-              <TableHeader className="bg-table_header rounded-[15px] ">
-                {table.getHeaderGroups().map((headerGroup) => (
-                  <TableRow
-                    key={headerGroup.id}
-                    className="flex  rounded-[15px] items-center  border-none"
-                  >
-                    {headerGroup.headers.map((header) => {
-                      return (
-                        <TableHead
-                          key={header.id}
-                          style={
-                            header.getSize() === 150
-                              ? { width: "100%" }
-                              : { minWidth: header.getSize() + "px" }
-                          }
-                          className="py-4 sm:py-[18px] px-4 sm:px-6 text-sm sm:text-lg bg-table_header text-primary font-medium"
-                        >
-                          {header.isPlaceholder
-                            ? null
-                            : flexRender(
-                                header.column.columnDef.header,
-                                header.getContext()
-                              )}
-                        </TableHead>
-                      );
-                    })}
-                  </TableRow>
-                ))}
-              </TableHeader>
-            </Table>
+    return (
+        <div className='h-full flex flex-col overflow-hidden '>
+            <ScrollArea className='flex-1 rounded-t-[15px] overflow-auto bg-white p-[20px] shadow-sm'>
+                {
+                    !loader ? <>
+                        <Table className='h-max sticky rounded-[12px] bg-[#F4F5F7]  top-0'>
+                            <TableHeader className='bg-table_header bg-[#F4F5F7] rounded-[12px] '>
+                                {table.getHeaderGroups().map(headerGroup => (
+                                    <TableRow key={headerGroup.id} className='flex  rounded-[15px] items-center  border-none'>
+                                        {headerGroup.headers.map(header => {
+                                            return (
+                                                <TableHead
+                                                    key={header.id}
+                                                    style={header.getSize() === 150 ? { width: '100%' } : { minWidth: header.getSize() + 'px' }}
+                                                    className='bg-table_header py-4 sm:py-[18px] px-4 sm:px-6 text-sm sm:text-lg bg-secondary text-secondary font-medium'>
+                                                    {header.isPlaceholder ? null : flexRender(header.column.columnDef.header, header.getContext())}
+                                                </TableHead>
+                                            )
+                                        })}
+                                    </TableRow>
+                                ))}
+                            </TableHeader>
+                        </Table>
 
             <Table>
               <TableBody className="">
@@ -139,7 +126,7 @@ const DataTable = ({
       </ScrollArea>
       {pagination && !loader && (
         <div className="px-6 rounded-b-[15px] py-2.5 flex justify-between items-center gap-y-2 sm:gap-y-0 flex-col sm:flex-row bg-white">
-          <p className="w-full text-center sm:text-start text-primary text-[13px] sm:text-[15px] font-medium">
+          <p className="w-full text-center sm:text-start text-secondary text-[14px] sm:text-[154x] font-medium">
             {" "}
             Showing {limit * page > totalItems ? totalItems : limit} out of{" "}
             {totalItems} results

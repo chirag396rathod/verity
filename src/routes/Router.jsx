@@ -13,6 +13,7 @@ import ProtectedRoute from "./ProtectedRoute";
 import Specialty from "@/pages/dashboard/Specialty";
 import PostReports from "@/pages/dashboard/postReports/postReports";
 import RemoveFromTag from "@/pages/dashboard/removeFromTag/RemoveFromTag";
+import ViewRemovePost from '@/pages/dashboard/removeFromTag/viewPost';
 import ProfileReports from "@/pages/dashboard/profileReports/ProfileReports";
 import CommunityReports from "@/pages/dashboard/communityReports/CommunityReports";
 import ProfileVerification from "@/pages/dashboard/profileVerification/ProfileVerification";
@@ -85,6 +86,14 @@ const Router = () => {
               element: (
                 <ProtectedRoute>
                   <RemoveFromTag />
+                </ProtectedRoute>
+              ),
+            },
+            {
+              path: ":id",
+              element: (
+                <ProtectedRoute>
+                  <ViewRemovePost />
                 </ProtectedRoute>
               ),
             },

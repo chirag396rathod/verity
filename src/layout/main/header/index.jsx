@@ -37,7 +37,7 @@ const Header = ({ setIsSidebar }) => {
           />
         </div>
         {!id ? (
-          <h3 className="text-primary font-medium text-[18px] xs:text-[20px] sm:text-[28px]">
+          <h3 className="text-primary font-semibold text-[18px] xs:text-[20px] sm:text-[28px]">
             {headings.find(
               (route) =>
                 pathname.includes(route.path) || pathname.startsWith(route.path)

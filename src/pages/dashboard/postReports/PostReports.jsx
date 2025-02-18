@@ -25,7 +25,7 @@ const PostReports = () => {
 
   const dispatch = useDispatch();
   const { loading, userData, total_user } = useSelector((state) => state.user);
-  const { searchQuery, setSearchQuery } = useSearch();
+  const { searchQuery } = useSearch();
   const [searchParams, setSearchParams] = useSearchParams();
 
   useEffect(() => {
@@ -91,6 +91,8 @@ const PostReports = () => {
         return { width: "73.781px", left: "138.248px" };
     }
   };
+
+  console.log({userData})
 
   return (
     <>

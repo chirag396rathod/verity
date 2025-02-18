@@ -43,12 +43,20 @@ export const SPECIALITY_ICON_ACTIVE =
 
 export const EDIT_ICON = BASE_URL + ICONS + "edit.svg";
 export const TRASH_ICON = BASE_URL + ICONS + "trash.svg";
+export const DOCUMENT_TEXT_ICON = BASE_URL + ICONS + "document-text.svg";
+export const BAN_ICON = BASE_URL + ICONS + "ban-icon.svg"
 
 export const ARROW_BACK = BASE_URL + ICONS + "send.png";
 
 export const POST_REPORT_ICON = BASE_URL + ICONS + "post_reports.svg";
 export const POST_REPORT_ICON_ACTIVE =
   BASE_URL + ICONS + "post_reports-active.svg";
+
+export const LIKE_POST_ACTIVE_ICON = BASE_URL + ICONS + "like-active.svg"
+export const COMMENT_POST_ICON = BASE_URL + ICONS + "comment.svg"
+export const SHARE_POST_ICON = BASE_URL + ICONS + "share.svg"
+export const ARCHIVE_INACTIVE_POST_ICON = BASE_URL + ICONS + "archive-inactive.svg"
+
 
 // Images
 
